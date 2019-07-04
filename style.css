@@ -8,6 +8,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 a {
@@ -18,3 +19,44 @@ li {
     list-style: none;
 }
 
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, p {
+    padding: 1em 0;
+}
+
+/* Showcase */
+
+.showcase {
+    min-height: 450px;
+    color: var(--primary-color);
+
+}
+
+.showcase .bg-image {
+    position: absolute;
+    background: url('img/showcase.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+.showcase .content-wrap,
+.section-a .content-wrap {
+    padding: 0 1.5em;
+}
+
+/* Section A */
