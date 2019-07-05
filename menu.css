@@ -1,3 +1,5 @@
+@media(max-width: 700px) {
+
 .menu-wrap {
     position: absolute;
     top: 0;
@@ -134,3 +136,6 @@
     color: inherit;
     transition: color 0.4s ease;
 }
+
+
+ } /* Hamburger Ends */
