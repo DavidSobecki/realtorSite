@@ -1,7 +1,10 @@
 /* Global */
 :root {
-    --primary-color:  rgba(13, 110, 139, 0.75);
-    --overlay-color: rgba(24, 39, 51, 0.85);
+    
+    --primary-color: rgba(213, 213, 213, .1); /* #D5D5D5 Paper */ 
+    --overlay-color: rgba(144, 153, 162, 0.8); /* #9099A2 Overcast */
+    --dark-color: rgba(109, 121, 147, 1); /* #6D7993 Lavender */ 
+    --shadow-color: rgba(150, 133, 143, 1);  /* #96858F Dusty */
     --menu-speed: 0.75;
 }
 
@@ -12,13 +15,11 @@
     text-align: center;
 }
 
-
-
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #ccc;
-    color: #333;
+    background: var(--primary-color);
+    color: var(--dark-color);
     font-size: 1.1em;
     line-height: 1.5;
     text-align: center;
@@ -44,17 +45,17 @@ h1, h2, h3, p {
 
 .btn {
     display: inline-block;
-    background: #333;
+    background: var(--dark-color);
     color: #fff;
     text-decoration: none;
     padding: 1em 2em;
     margin: .5em 0;
-    border: 1px solid #666;
+    border-radius: 4%;
 }
 
 .btn:hover {
-    background: #eaeaea;
-    color: #333;
+    background: var(--shadow-color);
+    color: #fff;
 }
 
 /* Showcase */
@@ -67,19 +68,26 @@ h1, h2, h3, p {
 
 .showcase .bg-image {
     position: absolute;
-    background: #333 url('img/showcase.jpg');
+    background: url('img/showcase.jpg');
+    background-color: var(--overlay-color);
+    background-blend-mode: multiply;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 450px;
     z-index: -1;
-    opacity: .6;
+    opacity: 1;
 }
 
-.showcase h1 {
-    padding-top: 100px;
-    padding-bottom: 0;
+.showcase h1
+ {
+    padding-top: 70px;
+    padding-bottom: 10px;
+}
+
+.showcase p {
+    padding-top: 150px;
 }
 
 .showcase .content-wrap,
@@ -89,13 +97,14 @@ h1, h2, h3, p {
 
 /* Section A */
 #section-a {
-    background: #ccc;
+    background: var(--primary-color);
     color: #333;
 
     /* padding-bottom: 2em; */
 }
 
 /* Section B */
+
 /*
 #section-b {
     padding: 2em 1em 1em;
@@ -119,14 +128,21 @@ h1, h2, h3, p {
 
 /* Section C */
 #section-c {
-    background-color: #333;
+    background-color: var(--shadow-color);
     padding: 2em;
 }
 
 #section-c a {
-    color: #ccc;
+    color: #fff;
 }
 
 #section-c a:hover {
     font-weight: bold;
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--shadow-color);
+    color: #fff;
 }
